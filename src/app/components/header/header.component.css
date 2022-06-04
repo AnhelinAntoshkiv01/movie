@@ -1,0 +1,14 @@
+.container > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: orangered;
+  height: 50px;
+  padding: 0 5%;
+}
+
+app-genre-badge {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

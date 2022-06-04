@@ -1,0 +1,22 @@
+div {
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 8px;
+  width: 400px;
+}
+
+h3 {
+  width: 300px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
