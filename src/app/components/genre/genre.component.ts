@@ -23,6 +23,6 @@ export class GenreComponent implements OnInit {
   }
 
   genreBadge() {
-    this.router.navigate([`${urls.movies}?with_genres=${this.genre.id}`])
+    this.router.navigate([`${urls.movie}?with_genres=${this.genre.id}`])
   }
 }

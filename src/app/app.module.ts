@@ -15,6 +15,7 @@ import { MovielistCardComponent } from './components/movielist-card/movielist-ca
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

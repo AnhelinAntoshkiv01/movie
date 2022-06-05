@@ -4,7 +4,6 @@ import {HttpClient} from "@angular/common/http";
 
 import {IMovie, IMovies} from "../interfaces";
 import {urls} from "../constants";
-import {query} from "@angular/animations";
 
 
 @Injectable({
@@ -19,6 +18,6 @@ export class MovieService {
   }
 
   getById(id: string): Observable<IMovie> {
-    return this.httpClient.get<IMovie>(`${urls.movies}/${id}`);
+    return this.httpClient.get<IMovie>(`${urls.movie}/${id}`);
   }
 }

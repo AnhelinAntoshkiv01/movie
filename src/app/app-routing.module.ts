@@ -14,7 +14,7 @@ const routes: Route[] = [
     path: '', component: MainLayoutComponent, children: [
       {path: '', redirectTo: 'movies', pathMatch: 'full'},
       {path: 'movies', component: MovielistComponent, children: [
-          {path: ':id', component: MovieDetailsComponent}
+        {path: ':id', component: MovieDetailsComponent}
         ]},
       {path: 'genres', component: GenreBadgeComponent, children: [
           {path: ':id', component: GenreComponent}
