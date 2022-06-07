@@ -1,2 +1,6 @@
-<app-movielist-card *ngFor="let movie of movies" [movie]="movie"></app-movielist-card>
-
+<app-movielist-card *ngFor="let movie of movies | paginate: {id: 'foo',
+itemsPerPage: 8,
+currentPage: 1,
+totalItems: 500}" [movie]="movie"></app-movielist-card>
+<button (click)="prevPage(1)">Prev</button>
+<button (click)="nextPage(1)">Next</button>

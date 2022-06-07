@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {NgxPaginationModule} from "ngx-pagination";
 
 import { AppComponent } from './app.component';
 import {AppRoutingModule} from "./app-routing.module";
@@ -13,6 +14,7 @@ import { GenreComponent } from './components/genre/genre.component';
 import { MovielistComponent } from './components/movielist/movielist.component';
 import { MovielistCardComponent } from './components/movielist-card/movielist-card.component';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
+
 
 
 
@@ -31,7 +33,8 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxPaginationModule
   ],
   providers: [
     {
@@ -40,6 +43,8 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
       useClass: MainInterceptor
     }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

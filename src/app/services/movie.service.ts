@@ -13,11 +13,12 @@ export class MovieService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getMovies(page: number): Observable<IMovies> {
+  getMovies(page: number = 1): Observable<IMovies> {
     return this.httpClient.get<IMovies>(urls.movies, {params: {page}});
   }
 
   getById(id: string): Observable<IMovie> {
     return this.httpClient.get<IMovie>(`${urls.movie}/${id}`);
   }
+
 }

@@ -1,17 +1,13 @@
-body {
+body.theme-light {
   --bg-color: white;
   --txt-color: black;
 }
 
-body.dark-theme {
+body.theme-dark {
   --d-bg-color: black;
   --d-txt-color: white;
 }
 
-body {
-  background: var(--d-bg-color);
-  color: var(--d-txt-color);
-}
 
 button {
   background: aquamarine;

@@ -1,12 +1,12 @@
 <div *ngIf="movie">
   <h1>{{movie.title}}</h1>
-  <div>{{movie.backdrop_path}}</div>
-  <div>{{movie.id}}</div>
-  <div>{{movie.adult}} {{movie.release_date}}</div>
-  <div>{{movie.original_language}} {{movie.original_title}}</div>
-  <div>{{movie.genre_ids}}</div>
-  <div>{{movie.poster_path}}</div>
-  <div>{{movie.video}}</div>
-  <div>{{movie.vote_average}} {{movie.vote_count}} {{movie.popularity}}</div>
-  <div>{{movie.overview}}</div>
+  <div><b>Id:</b> {{movie.id}}</div>
+  <img src="https://image.tmdb.org/t/p/w500/{{movie.backdrop_path}}" alt="backdrop"/>
+  <div><b>Adult:</b> {{movie.adult}} <b>Release Data:</b> {{movie.release_date}}</div>
+  <div><b>Original Language:</b> {{movie.original_language}}<b>Original Title:</b> {{movie.original_title}}</div>
+  <div><b>Genre:</b> {{movie.genre_ids}}</div>
+  <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="poster"/>
+  <div><b>Video:</b> {{movie.video}}</div>
+  <div><b>Vote Average:</b> {{movie.vote_average}}<b>Vote Count:</b> {{movie.vote_count}}<b>Popularity:</b> {{movie.popularity}}</div>
+  <div><b>Overview:</b> {{movie.overview}}</div>
   </div>

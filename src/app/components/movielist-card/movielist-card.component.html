@@ -2,9 +2,9 @@
   <h3>{{movie.title}}</h3>
   <div routerLinkActive="active">
     <a routerLink="{{movie.id}}" [state]="movie">
-      <img src="https://image.tmdb.org/t/p/w300{{movie.backdrop_path}}" alt="poster">
+      <img src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}" alt="poster">
     </a>
   </div>
-  rating: {{movie.vote_average}}
+  <b>rating:</b> {{movie.vote_average}}
 </div>
 <router-outlet></router-outlet>

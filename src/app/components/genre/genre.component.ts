@@ -1,9 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
-import {HttpClient} from "@angular/common/http";
+import {ActivatedRoute, Router} from "@angular/router";
 
 import {IGenre} from "../../interfaces";
-import {urls} from "../../constants";
+import {GenreService} from "../../services";
 
 
 @Component({
@@ -17,12 +16,15 @@ export class GenreComponent implements OnInit {
   genre: IGenre;
 
   constructor(private router: Router,
-              private httpClient: HttpClient) { }
+              private activatedRoute: ActivatedRoute,
+              private genreService:GenreService) { }
 
   ngOnInit(): void {
+    this.genreService.getGenreById(this.genre.id).subscribe(value => this.genre = value)
   }
 
-  genreBadge() {
-    this.router.navigate([`${urls.movie}?with_genres=${this.genre.id}`])
+  genreBadge(): void {
+    this.router.navigate([this.genre.id], {relativeTo: this.activatedRoute})
   }
+
 }
